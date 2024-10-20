@@ -22,16 +22,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             min-height: 100vh;
             color: #333;
+            margin: 0;
         }
 
         /* Main container */
         #main-container {
             text-align: center;
             max-width: 1200px;
-            padding: 50px 20px;
+            padding: 0px 20px;
+            flex-grow: 1;
         }
 
         /* Header title */
@@ -59,7 +61,6 @@
             font-size: 1.4rem;
             margin-top: 30px;
             transition: background-color 0.3s ease;
-            cursor: pointer;
         }
 
         .cta-button:hover {
@@ -96,6 +97,7 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 50px;
+            margin-bottom: 100px;
         }
 
         .feature-box {
@@ -104,25 +106,38 @@
             border-radius: 10px;
             margin: 20px;
             text-align: center;
-            width: 300px;
+            width: 350px; /* Increased width */
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px); /* Slight lift on hover */
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .feature-box img {
-            max-width: 100px;
+            max-width: 300px; /* Increased image size */
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover img {
+            transform: scale(1.1); /* Image zooms slightly on hover */
         }
 
         .feature-box h3 {
             color: #2e7d32;
-            font-size: 1.5rem;
+            font-size: 1.7rem; /* Slightly increased font size */
             margin-bottom: 15px;
         }
 
         .feature-box p {
             color: #666;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
+
+
 
         /* Dialogflow Messenger style */
         df-messenger {
@@ -135,24 +150,7 @@
             right: 20px;
         }
 
-        /* Footer styling */
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #2e7d32;
-            color: white;
-            text-align: center;
-        }
 
-        footer a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -164,7 +162,7 @@
         <h2>Your Nature-Inspired Dating Companion</h2>
 
         <!-- Call to Action -->
-        <a href="#" class="cta-button" id="cta-chatbot">Chat with ParkTor</a>
+        <a href="#" class="cta-button">Chat with ParkTor</a>
 
         <!-- Chatbot section -->
         <div id="chatbot-container">
@@ -183,45 +181,45 @@
         <!-- Features Section -->
         <div id="features">
             <div class="feature-box">
-                <img src="https://example.com/park-icon.png" alt="Park icon"> <!-- Replace with relevant image URL -->
+                <img src="https://beta.nparks.gov.sg/images/default-source/parks-img/pasir-ris-park/pasir-ris-park-hero-palm-trees.jpg" alt="Park icon"> <!-- Replace with relevant image URL -->
                 <h3>Relaxing Park Dates</h3>
-                <p>Explore the tranquility of serene parks, perfect for peaceful conversations and nature watching.</p>
+                <p>Explore the tranquility of East Coast Park, perfect for peaceful conversations and nature watching.</p>
             </div>
             <div class="feature-box">
-                <img src="https://example.com/beach-icon.png" alt="Beach icon"> <!-- Replace with relevant image URL -->
+                <img src="https://www.sentosa.com.sg/-/media/sentosa/article-listing/articles/cheap-dates/cheapdateshero.jpg?revision=d96ee444-1d83-4e5e-9fa6-0234e087debf" alt="Beach icon"> <!-- Replace with relevant image URL -->
                 <h3>Beachside Strolls</h3>
-                <p>Enjoy a romantic walk by the beach, feeling the breeze while watching the sunset together.</p>
+                <p>Enjoy a romantic walk by Siloso Beach, feeling the breeze while watching the sunset together.</p>
             </div>
             <div class="feature-box">
-                <img src="https://example.com/hike-icon.png" alt="Hike icon"> <!-- Replace with relevant image URL -->
+                <img src="https://expat-live.s3.ap-southeast-1.amazonaws.com/s3fs-public/styles/960_640/public/2021-07/best-hikes-singapore%20%281%29.jpg?itok=3MkXmoCd" alt="Hike icon"> <!-- Replace with relevant image URL -->
                 <h3>Adventurous Hikes</h3>
-                <p>For adventurous couples, discover scenic hiking trails that lead to breathtaking views.</p>
+                <p>For adventurous couples, discover scenic hiking trails at MacRitchie Reservoir Park that lead to breathtaking views.</p>
+            </div>
+            <div class="feature-box">
+                <img src="https://media.timeout.com/images/105667973/1024/576/image.webp" alt="Bird Watching icon"> <!-- Replace with relevant image URL -->
+                <h3>Bird Watching</h3>
+                <p>Immerse yourselves in nature by exploring birdwatching trails, perfect for enjoying wildlife and peaceful surroundings together.</p>
+            </div>            
+            <div class="feature-box">
+                <img src="https://image.kkday.com/v2/image/get/w_960%2Cc_fit%2Cq_55%2Ct_webp/s1.kkday.com/product_100780/20210924090857_tmLQD/jpg" alt="Kayaking icon"> <!-- Replace with relevant image URL -->
+                <h3>Kayaking</h3>
+                <p>Enjoy a day of adventure together by kayaking on serene waters, perfect for both fun and tranquility in nature.</p>
+            </div>
+            <div class="feature-box">
+                <img src="https://nowboarding.changiairport.com/content/dam/canowboarding/article-assets/live-local/8-best-picnic-spots-in-singapore-for-every-family-/GettyImages-496883305.jpg" alt="Picnic icon"> <!-- Replace with relevant image URL -->
+                <h3>Picnic by the Lake</h3>
+                <p>Relax by a peaceful lake and enjoy a picnic while surrounded by the beauty of nature.</p>
             </div>
         </div>
-    </div>
+        
+   
 
     <!-- Footer -->
-    <footer>
-        <p>Find your next adventure with ParkTor! Made with 💚 by nature lovers.</p>
-        <a href="#">Contact Us</a>
+    <footer style="background-color: white">
+        <p>Designed by Group 2</p>
     </footer>
 
-    <!-- JavaScript to open the chatbot when CTA is clicked -->
-    <script>
-        function openChatbot() {
-            const chatBubble = document.querySelector('df-messenger').shadowRoot.querySelector('df-messenger-chat-bubble');
-            if (chatBubble) {
-                chatBubble.click(); // Simulates user click on the chat bubble
-            }
-        }
 
-        // Wait for Dialogflow Messenger to load, then allow the CTA button to work
-        window.addEventListener('dfMessengerLoaded', function() {
-            document.getElementById('cta-chatbot').addEventListener('click', function(event) {
-                event.preventDefault();
-                openChatbot();
-            });
-        });
-    </script>
+
 </body>
 </html>
